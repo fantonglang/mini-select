@@ -62,6 +62,7 @@
   display: none;
   height: 52px;
   padding: 6px 24px;
+  margin: 0 -8px;
   z-index: 1000;
   position: relative;
   background: #FFF;

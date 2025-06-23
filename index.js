@@ -93,7 +93,6 @@
       root.querySelector('.ms-display').addEventListener('click', async function() {
         if (input) {
           if (!root.classList.contains('ms-open')) {
-            input.value = '';
             setTimeout(function() {
               input.focus();
             }, 300);
@@ -192,4 +191,3 @@
       });
     });
   })(window);
-  
