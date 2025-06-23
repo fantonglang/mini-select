@@ -1,0 +1,113 @@
+.mini-select {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #EBEBEB;
+  background: #FFF;
+  max-height: 52px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+.mini-select.ms-open {
+  max-height: 520px;
+}
+.mini-select.ms-open .ms-inp {
+  display: block;
+}
+.mini-select.ms-open .ms-options {
+  display: block;
+}
+.mini-select.ms-open .ms-display::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #EBEBEB;
+}
+.mini-select.ms-open .ms-display .ms-arrow {
+  transform: rotate(180deg);
+}
+.mini-select .ms-display {
+  height: 48px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.mini-select .ms-display .ms-arrow {
+  display: block;
+  width: 17px;
+  height: 8.5px;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11" fill="none"><path d="M1 1.25L9.5 9.75L18 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  background-size: 100% 100%;
+  transition: transform 0.3s ease;
+}
+.mini-select .ms-display .ms-selected-text {
+  flex: 1;
+  color: #89929C;
+  font-size: 16px;
+  line-height: 127%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mini-select .ms-display .ms-selected-text[ms-selected-id] {
+  color: #212529;
+}
+.mini-select .ms-inp {
+  display: none;
+  height: 52px;
+  padding: 6px 24px;
+  z-index: 1000;
+  position: relative;
+  background: #FFF;
+}
+.mini-select .ms-inp input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid #EBEBEB !important;
+  border-radius: 8px;
+  color: #212529;
+  font-size: 16px;
+  line-height: 127%;
+  padding: 0 8px !important;
+}
+.mini-select .ms-options {
+  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  position: relative;
+  background: #FFF;
+}
+.mini-select .ms-options:hover .ms-selected {
+  background-color: #ddd;
+  color: #212529;
+}
+.mini-select .ms-options:hover .ms-selected:hover {
+  background-color: #5897fb;
+  color: #fff;
+}
+.mini-select .ms-option {
+  padding: 8px 24px;
+  cursor: pointer;
+  color: #212529;
+  font-size: 16px;
+  line-height: 127%;
+}
+.mini-select .ms-option:hover {
+  background-color: #5897fb;
+  color: #fff;
+}
+.mini-select .ms-selected {
+  background-color: #5897fb;
+  color: #fff;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,115 @@
+.mini-select {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #EBEBEB;
+  background: #FFF;
+  max-height: 52px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+  &.ms-open {
+    max-height: 520px;
+    .ms-inp {
+      display: block;
+    }
+    .ms-options {
+      display: block;
+    }
+    .ms-display {
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #EBEBEB;
+      }
+      .ms-arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .ms-display {
+    height: 48px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    .ms-arrow {
+      display: block;
+      width: 17px;
+      height: 8.5px;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="19" height="11" viewBox="0 0 19 11" fill="none"><path d="M1 1.25L9.5 9.75L18 1.25" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      background-size: 100% 100%;
+      transition: transform 0.3s ease;
+    }
+    .ms-selected-text {
+      flex: 1;
+      color: #89929C;
+      font-size: 16px;
+      line-height: 127%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &[ms-selected-id] {
+        color: #212529;
+      }
+    }
+  }
+  .ms-inp {
+    display: none;
+    height: 52px;
+    padding: 6px 24px;
+    z-index: 1000;
+    position: relative;
+    background: #FFF;
+    input {
+      display: block;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border: 1px solid #EBEBEB !important;
+      border-radius: 8px;
+      color: #212529;
+      font-size: 16px;
+      line-height: 127%;
+      padding: 0 8px !important;
+    }
+  }
+  .ms-options {
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    position: relative;
+    background: #FFF;
+    &:hover {
+      .ms-selected {
+        background-color: #ddd;
+        color: #212529;
+        &:hover {
+          background-color: #5897fb;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .ms-option {
+    padding: 8px 24px;
+    cursor: pointer;
+    color: #212529;
+    font-size: 16px;
+    line-height: 127%;
+    &:hover {
+      background-color: #5897fb;
+      color: #fff;
+    }
+  }
+  .ms-selected {
+    background-color: #5897fb;
+    color: #fff;
+  }
+}
