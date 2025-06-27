@@ -6,6 +6,20 @@
   max-height: 52px;
   transition: max-height 0.3s ease;
   overflow: hidden;
+  position: relative;
+  &.ms-focus {
+    border-color: #5897fb;
+  }
+  .dummy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    opacity: 0;
+    z-index: -1;
+  }
   &.ms-open {
     max-height: 520px;
     .ms-inp {
@@ -87,14 +101,12 @@
     z-index: 1000;
     position: relative;
     background: #FFF;
-    &:hover {
-      .ms-selected {
-        background-color: #ddd;
-        color: #212529;
-        &:hover {
-          background-color: #5897fb;
-          color: #fff;
-        }
+    .ms-selected {
+      background-color: #ddd;
+      color: #212529;
+      &.ms-hover {
+        background-color: #5897fb;
+        color: #fff;
       }
     }
   }
@@ -104,7 +116,7 @@
     color: #212529;
     font-size: 16px;
     line-height: 127%;
-    &:hover {
+    &.ms-hover {
       background-color: #5897fb;
       color: #fff;
     }

@@ -6,6 +6,20 @@
   max-height: 52px;
   transition: max-height 0.3s ease;
   overflow: hidden;
+  position: relative;
+}
+.mini-select.ms-focus {
+  border-color: #5897fb;
+}
+.mini-select .dummy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  opacity: 0;
+  z-index: -1;
 }
 .mini-select.ms-open {
   max-height: 520px;
@@ -87,11 +101,11 @@
   position: relative;
   background: #FFF;
 }
-.mini-select .ms-options:hover .ms-selected {
+.mini-select .ms-options .ms-selected {
   background-color: #ddd;
   color: #212529;
 }
-.mini-select .ms-options:hover .ms-selected:hover {
+.mini-select .ms-options .ms-selected.ms-hover {
   background-color: #5897fb;
   color: #fff;
 }
@@ -102,7 +116,7 @@
   font-size: 16px;
   line-height: 127%;
 }
-.mini-select .ms-option:hover {
+.mini-select .ms-option.ms-hover {
   background-color: #5897fb;
   color: #fff;
 }
